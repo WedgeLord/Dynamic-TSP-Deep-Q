@@ -1,12 +1,9 @@
 # Dynamic TSP Deep Q
  
-[On Windows Command Prompt]
-Using virtual environment to install packages without conflicts
-		○ py -3.8 -m venv <new dirname>
-     (This has been done already)
-		○ cd <new dirname>
-		○ .\Scripts\activate
-     (activate this any time you run python code from command line)
-	    (you can make this a macro using the following command)
- 	○ doskey activate=.\Scripts\activate
-		○ pip install "gym==0.25.2 tensorflow==2.3.0 keras==2.3.0 keras-rl2 numpy<1.19 pyglet protobuf==3.20.*"
+Check out the OneNote file for instructions on getting started
+
+You'll need a /solutions folder for storing the .gif's
+
+This model is based on the Dynamic Traveling Salesman Problem and takes an action whenever a new "request" is made. The agent makes moves inside of a loop until a new request is made. The agent gets +1 for accepting a request, 0 for declining, and -1 for failing to deliver within the request's deadline.
+
+The environment has keywords arguments that can be used to adjust the size of the model. Keep in mind that the action space grows factorially with respect to the size of the route queue (max_cities), so be careful making the problem too large.
